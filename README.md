@@ -1,6 +1,17 @@
 # NgJobSearch
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.1.
+IT: Progetto angular creato con lo scopo di testare le conoscenze apprese durante il corso per la certificazione Angular di secondo livello. Il progetto è stato testato in tre modalità:
+- tramite unit test via Karma;
+- tramite e2e test via Cypress;
+- test in locale facendo partire il progetto tramite il comando `ng serve`.
+Il resto del file README non è stato modificato.
+
+
+ENG: Angular project created with the purpose of testing the knowledge acquired during the Level 2 Angular certification course. The project has been tested in three ways:
+- through unit tests via Karma;
+- through e2e tests via Cypress;
+- local testing by running the project with the `ng serve` command. 
+The rest of the README file has not been modified.
 
 ## Development server
 
