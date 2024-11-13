@@ -4,6 +4,7 @@ IT: Progetto angular creato con lo scopo di testare le conoscenze apprese durant
 - tramite unit test via Karma;
 - tramite e2e test via Cypress;
 - test in locale facendo partire il progetto tramite il comando `ng serve`.
+
 Il resto del file README non è stato modificato.
 
 
@@ -11,6 +12,7 @@ ENG: Angular project created with the purpose of testing the knowledge acquired 
 - through unit tests via Karma;
 - through e2e tests via Cypress;
 - local testing by running the project with the `ng serve` command. 
+
 The rest of the README file has not been modified.
 
 ## Development server
