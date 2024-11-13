@@ -1,5 +1,5 @@
 <div *ngFor="let job of jobs" class="job-item">
-  <img [src]="job.companyLogo" alt="{{ job.companyName }}" class="company-logo">
+  <img [src]="job.companyLogo ? job.companyLogo : 'assets/placeholder-logo.png'" alt="{{ job.companyName }}" class="company-logo">
   <div class="job-details">
     <h3><a [routerLink]="['/jobs', job.id]">{{ job.title }}</a></h3>
     <p>{{ job.companyName }}</p>
@@ -10,7 +10,8 @@
       class="fa fa-star"
       [ngClass]="{ 'favorite': isFavorite(job) }"
       (click)="toggleFavorite(job)"
-      title="Add to Favorites">
+      title="Add to Favorites"
+      [id]="'star-' + job.id">
     </i>
   </div>
 </div>

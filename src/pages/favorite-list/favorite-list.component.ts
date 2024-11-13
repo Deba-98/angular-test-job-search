@@ -21,7 +21,6 @@ export class FavoriteListComponent implements OnInit {
   
   toggleFavorite(job: Job): void {
     this.jobService.removeFavorite(job.id);
-    this.favoriteJobs = this.jobService.getFavorites();
-  }
-  
+    this.favoriteJobs = this.favoriteJobs.filter(fav => fav.id !== job.id);
+  }  
 }

@@ -2,7 +2,7 @@
   <button routerLink="/jobs" class="back-button">Back to Jobs List</button>
   
   <div class="job-header">
-    <img [src]="job.companyLogo" alt="{{ job.companyName }}" class="company-logo">
+    <img [src]="job.companyLogo ? job.companyLogo : 'assets/placeholder-logo.png'" alt="{{ job.companyName }}" class="company-logo">
     <h2 class="job-title">{{ job.title }}</h2>
   </div>
 
