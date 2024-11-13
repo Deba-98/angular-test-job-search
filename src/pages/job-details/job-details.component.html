@@ -1,0 +1,18 @@
+<div *ngIf="job" class="job-details-container">
+  <button routerLink="/jobs" class="back-button">Back to Jobs List</button>
+  
+  <div class="job-header">
+    <img [src]="job.companyLogo" alt="{{ job.companyName }}" class="company-logo">
+    <h2 class="job-title">{{ job.title }}</h2>
+  </div>
+
+  <div class="job-info">
+    <p><strong>Company:</strong> {{ job.companyName }}</p>
+    <p><strong>Reference:</strong> {{ job.reference }}</p>
+    <p><strong>Location:</strong> {{ job.location }}</p>
+    <p><strong>Industries:</strong> {{ job.industries.join(', ') }}</p>
+    <p><strong>Type:</strong> {{ job.types.join(', ') }}</p>
+    <p><strong>Published on:</strong> {{ job.publishDate }}</p>
+    <p><strong>Description:</strong> {{ job.description }}</p>
+  </div>
+</div>
