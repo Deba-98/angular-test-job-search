@@ -10,14 +10,14 @@ describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        AppComponent, // Importa il componente se è standalone
-        RouterTestingModule // Aggiungi RouterTestingModule per simulare il Router
+        AppComponent,
+        RouterTestingModule 
       ],
       providers: [
         {
           provide: ActivatedRoute,
           useValue: {
-            snapshot: { paramMap: { get: () => null } }, // Mock di ActivatedRoute
+            snapshot: { paramMap: { get: () => null } },
           },
         },
       ],

@@ -12,15 +12,15 @@ describe('JobListComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        JobListComponent, // Importa il componente se è standalone
-        HttpClientTestingModule // Aggiunto per simulare HttpClient nel JobService
+        JobListComponent, 
+        HttpClientTestingModule 
       ],
       providers: [
-        JobService, // Aggiungi il servizio JobService
+        JobService, 
         {
           provide: ActivatedRoute,
           useValue: {
-            snapshot: { paramMap: { get: () => 123 } }, // Mock di ActivatedRoute con un jobId simulato
+            snapshot: { paramMap: { get: () => 123 } }, 
           },
         },
       ],
