@@ -13,7 +13,8 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/ng-job-search",
+            "outputPath": "docs",
+            "baseHref": "/angular-test-job-search/",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -23,7 +24,8 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/mockServiceWorker.js"
+              "src/mockServiceWorker.js",
+              "src/_redirects"
             ],
             "styles": [
               "src/styles.css"
@@ -134,6 +136,9 @@
               "devServerTarget": "ng-job-search:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
