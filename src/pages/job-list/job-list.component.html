@@ -1,0 +1,16 @@
+<div *ngFor="let job of jobs" class="job-item">
+  <img [src]="job.companyLogo" alt="{{ job.companyName }}" class="company-logo">
+  <div class="job-details">
+    <h3><a [routerLink]="['/jobs', job.id]">{{ job.title }}</a></h3>
+    <p>{{ job.companyName }}</p>
+    <p>Reference: {{ job.reference }}</p>
+  </div>
+  <div>
+    <i
+      class="fa fa-star"
+      [ngClass]="{ 'favorite': isFavorite(job) }"
+      (click)="toggleFavorite(job)"
+      title="Add to Favorites">
+    </i>
+  </div>
+</div>

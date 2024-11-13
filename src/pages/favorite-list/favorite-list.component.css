@@ -1,0 +1,38 @@
+.job-item {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .company-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+  }
+  
+  .job-details {
+    flex-grow: 1;
+  }
+  
+  .icon-star {
+    cursor: pointer;
+    font-size: 24px;
+    color: grey; 
+  }
+  
+  .icon-star.favorite {
+    color: gold; 
+  }
+  
+  .fa-star {
+    cursor: pointer;
+    font-size: 24px;
+    color: grey; 
+  }
+  
+  .fa-star.favorite {
+    color: gold; 
+  }
+  

@@ -1,29 +1,32 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { AppComponent } from './app.component';
-import { RouterTestingModule } from '@angular/router/testing';
+import { JobDetailsComponent } from './job-details.component';
+import { JobService } from '../../services/job-serve.service';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ActivatedRoute } from '@angular/router';
+import { of } from 'rxjs';
 
-describe('AppComponent', () => {
-  let component: AppComponent;
-  let fixture: ComponentFixture<AppComponent>;
+describe('JobDetailsComponent', () => {
+  let component: JobDetailsComponent;
+  let fixture: ComponentFixture<JobDetailsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        AppComponent, // Importa il componente se è standalone
-        RouterTestingModule // Aggiungi RouterTestingModule per simulare il Router
+        JobDetailsComponent, // Importa il componente se è standalone
+        HttpClientTestingModule // Aggiunto per simulare HttpClient nel JobService
       ],
       providers: [
+        JobService, // Aggiungi il servizio JobService
         {
           provide: ActivatedRoute,
           useValue: {
-            snapshot: { paramMap: { get: () => null } }, // Mock di ActivatedRoute
+            snapshot: { paramMap: { get: (key: string) => 123 } }, // Mock di ActivatedRoute con un jobId simulato (123)
           },
         },
       ],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(AppComponent);
+    fixture = TestBed.createComponent(JobDetailsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

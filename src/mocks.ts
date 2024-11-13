@@ -1,6 +1,7 @@
 import { http, HttpResponse } from "msw";
+import { Job } from "./services/job-serve.service";
 
-const DETAILED = {
+export const DETAILED: { [key: number]: Job }  = {
   75278: {
     id: 75278,
     companyName: "Scroll.io",
